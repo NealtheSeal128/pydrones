@@ -55,16 +55,16 @@ def main():
             for event in pygame.event.get():
                 if event.type == pygame.JOYBUTTONDOWN:
                     btn = event.button
-                    if btn == 0 and not flying:  # A
+                    if btn == 0 and not flying:     
                         drone.take_off()
                         flying = True
-                    elif btn == 1 and flying:  # B
+                    elif btn == 1 and flying:     
                         drone.land()
                         flying = False
-                    elif btn == 3 and flying:  # Y
+                    elif btn == 3 and flying:     
                         drone.send_rc_control(0, 0, 0, 0)
                         print("hover")
-                    elif btn == 7:  # Start
+                    elif btn == 7:         
                         print("Quitting.")
                         return
             if flying and pad.get_numaxes() >= 4:

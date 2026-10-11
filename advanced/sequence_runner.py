@@ -1,6 +1,6 @@
 """Execute a JSON mission file.
 
-    python advanced/sequence_runner.py [path]  # default: sample_mission.json
+    python advanced/sequence_runner.py [path] (default: sample_mission.json)
 
 Format: list of {"cmd": ..., ...} steps. Valid cmds:
   move_forward/backward/left/right/up/down (arg), rotate (arg),

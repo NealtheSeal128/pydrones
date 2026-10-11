@@ -11,7 +11,7 @@ import time
 from contextlib import contextmanager
 from datetime import datetime
 
-# RC loop frame time: 20 Hz, matching send_rc_control streaming convention.
+                                                                           
 RC_FRAME = 0.05
 
 RC_MIN = -100

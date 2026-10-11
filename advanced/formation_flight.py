@@ -25,7 +25,7 @@ def formation_offsets(shape, count):
         return [(0, i * 60) for i in range(count)]
     if shape == "v":
         return [(abs(i - count // 2) * -40, (i - count // 2) * 60) for i in range(count)]
-    # diamond
+             
     base = [(0, 0), (60, 60), (60, -60), (120, 0)]
     while len(base) < count:
         base.append((len(base) * 40, 0))
@@ -55,7 +55,7 @@ def main(drone_count=3, shape="line"):
     manager.create_drones()
     print(f"Created {len(manager.drone_list)} drones.")
 
-    # Take off in rows of up to 2 (mirrors DroneManager.takeoff_all_drones batching).
+                                                                                     
     rows = [manager.drone_list[i : i + 2] for i in range(0, len(manager.drone_list), 2)]
     manager.takeoff_all_drones(rows)
 

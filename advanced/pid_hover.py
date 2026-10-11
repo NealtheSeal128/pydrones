@@ -36,7 +36,7 @@ class PID:
 def main(target=50, kp=0.6, ki=0.05, kd=0.2, cycles=20):
     drone = Drone()
     with mission(drone) as log:
-        # Simulated altitude state: takeoff_height + corrections applied.
+                                                                         
         altitude = 100.0
         pid = PID(kp, ki, kd)
         dt = 0.5

@@ -19,7 +19,7 @@ from pysimverse import Drone
 
 from utils.drone_base import RC_FRAME, hover
 
-STEP = 40  # RC magnitude per keypress burst
+STEP = 40                                   
 
 
 def print_help():
@@ -50,7 +50,7 @@ def main():
 
         if k == "q" or name == "q":
             state["quit"] = True
-            return False  # stop listener
+            return False                 
         if k == "t":
             if not state["flying"]:
                 drone.take_off()
@@ -84,7 +84,7 @@ def main():
             print("hover (RC zeroed)")
 
     def on_release(key):
-        # Stop motion when a motion key is released.
+                                                    
         name = getattr(key, "name", None)
         try:
             k = key.char.lower() if key.char else None

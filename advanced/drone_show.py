@@ -17,7 +17,7 @@ from pysimverse import DroneManager
 
 from utils.drone_base import hover
 
-# (description, action) beats. Actions receive (drone, index).
+                                                              
 BEATS = [
     ("ascend", lambda d, i: d.move_up(40)),
     ("spread", lambda d, i: d.move_right(40) if i % 2 == 0 else d.move_left(40)),
@@ -32,7 +32,7 @@ def dancer(drone, index, barrier, log_lock):
         action(drone, index)
         with log_lock:
             print(f"drone {index}: {name}")
-        barrier.wait()  # sync all drones before next beat
+        barrier.wait()                                    
     hover(drone, 1.0)
     barrier.wait()
 
