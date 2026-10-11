@@ -1,0 +1,9 @@
+[
+  { "cmd": "move_forward", "arg": 50 },
+  { "cmd": "hover", "arg": 1.0 },
+  { "cmd": "rotate", "arg": 90 },
+  { "cmd": "rc", "lr": 0, "fb": 30, "ud": 0, "yaw": 20, "duration": 2.0 },
+  { "cmd": "move_up", "arg": 30 },
+  { "cmd": "hover", "arg": 1.0 },
+  { "cmd": "move_down", "arg": 30 }
+]
